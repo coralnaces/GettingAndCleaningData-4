@@ -6,24 +6,32 @@
 # - One variable per column
 # - One kind of variable per table
 
-# Change dir
-setwd(dirname(sys.frame(1)$ofile))
+# Set working directory into dir
+#setwd(dirname(sys.frame(1)$ofile))
+
+# Data location
+data.dir <- file.path("./data") # Change to the location of the UCI HAR Dataset folder
+data.tidydir <- file.path("./tidy")
 
 # Prepare files
-if (!file.exists("./data")) {
-        dir.create("./data")
+if (!file.exists(data.dir)) {
+        dir.create(data.dir)
+}
+
+if (!file.exists(data.tidydir)) {
+        dir.create(data.tidydir)
 }
 
 data.url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-data.archive <- "./data/getdata_projectfiles_UCI_HAR_Dataset.zip"
-data.filename <- "./data/UCI HAR Dataset"
+data.archive <- file.path(data.dir, "getdata_projectfiles_UCI_HAR_Dataset.zip")
+data.filename <- file.path(data.dir, "UCI HAR Dataset")
 
 if (!file.exists(data.archive)) {
         download.file(data.url, destfile = data)
 }
 
 if (!file.exists(data.filename)) {
-        unzip(data.archive, exdir = "./data")
+        unzip(data.archive, exdir = data.dir)
 }
 
 # Work on dataset
@@ -141,12 +149,16 @@ tidy2 <- tidy1 %>%
         summarize_all(mean)
 
 # Save files
-if (file.exists("./tidy1.csv")) {
-        file.remove("./tidy1.csv")
+tidy1file <- file.path(data.tidydir, "tidy1.txt")
+if (file.exists(tidy1file)) {
+        file.remove(tidy1file)
 }
-data.table::fwrite(tidy1, "./tidy1.csv", append = FALSE)
+#data.table::fwrite(tidy1, "./tidy1.csv", append = FALSE)
+write.table(tidy1, file = tidy1file, row.names = FALSE)
 
-if (file.exists("./tidy2.csv")) {
-        file.remove("./tidy2.csv")
+tidy2file <- file.path(data.tidydir, "tidy2.txt")
+if (file.exists(tidy2file)) {
+        file.remove(tidy2file)
 }
-data.table::fwrite(tidy2, "./tidy2.csv", append = FALSE)
+#data.table::fwrite(tidy2, "./tidy2.csv", append = FALSE)
+write.table(tidy2, file = tidy2file, row.names = FALSE)
