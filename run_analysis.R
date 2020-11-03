@@ -99,10 +99,11 @@ data.feature_names <- c("tbody_accel_mean_x", "tbody_accel_mean_y",
 # Load test data
 data.test.data.subject <- readLines(data.test.file.subject) %>%
         as_tibble %>%
+        mutate(set = "TEST") %>%
         rename(subject = value)
 data.test.data.x <- str_split(trimws(readLines(data.test.file.x)),
                               pattern = "( +)", simplify = TRUE) %>%
-        as_tibble(colnames = data.feature_names) %>%
+        as_tibble %>%
         select(all_of(data.feature_ids)) %>%
         mutate_all(as.numeric) %>%
         `colnames<-`(data.feature_names)
@@ -119,6 +120,7 @@ rm(list=c("data.test.data.subject", "data.test.data.x", "data.test.data.y"))
 # Load training data
 data.train.data.subject <- readLines(data.train.file.subject) %>%
         as_tibble %>%
+        mutate(set = "TRAIN") %>%
         rename(subject = value)
 data.train.data.x <- str_split(trimws(readLines(data.train.file.x)),
                               pattern = "( +)", simplify = TRUE) %>%
@@ -137,7 +139,7 @@ data.train <- bind_cols(data.train.data.subject, data.train.data.x, data.train.d
 rm(list=c("data.train.data.subject", "data.train.data.x", "data.train.data.y"))
 
 # Merge test and train
-tidy1 <- rbind(data.test, data.train)
+tidy1 <- bind_rows(data.test, data.train)
 
 # Free intermediate
 rm(list=c("data.test", "data.train"))
@@ -146,6 +148,7 @@ rm(list=c("data.test", "data.train"))
 # Second tidy data
 tidy2 <- tidy1 %>%
         group_by(subject, activity) %>%
+        select(-set) %>%
         summarize_all(mean)
 
 # Save files
