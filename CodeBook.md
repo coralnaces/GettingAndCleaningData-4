@@ -39,72 +39,72 @@ This file is the Code Book for the `run_analysis.R` script.
 |----------|------------|
 | subject | The subject of the observation |
 | set | The set containing the data (TEST or TRAINING) |
-| tbody_accel_mean_x | |
-| tbody_accel_mean_y | |
-| tbody_accel_mean_z | |
-| tbody_accel_std_x | |
-| tbody_accel_std_y | |
-| tbody_accel_std_z | |
-| tgravity_accel_mean_x | |
-| tgravity_accel_mean_y | |
-| tgravity_accel_mean_z | |
-| tgravity_accel_std_x | |
-| tgravity_accel_std_y | |
-| tgravity_accel_std_z | |
-| tbody_accel_jerk_mean_x | |
-| tbody_accel_jerk_mean_y | |
-| tbody_accel_jerk_mean_z | |
-| tbody_accel_jerk_std_x | |
-| tbody_accel_jerk_std_y | |
-| tbody_accel_jerk_std_z | |
-| tbody_gyro_mean_x | |
-| tbody_gyro_mean_y | |
-| tbody_gyro_mean_z | |
-| tbody_gyro_std_x | |
-| tbody_gyro_std_y | |
-| tbody_gyro_std_z | |
-| tbody_gyrojerk_mean_x | |
-| tbody_gyrojerk_mean_y | |
-| tbody_gyrojerk_mean_z | |
-| tbody_gyrojerk_std_x | |
-| tbody_gyrojerk_std_y | |
-| tbody_gyrojerk_std_z | |
-| tbody_accel_mag_mean | |
-| tbody_accel_mag_std | |
-| tgravity_accel_mag_mean | |
-| tgravity_accel_mag_std | |
-| tbody_accel_jerkmag_mean | |
-| tbody_accel_jerkmag_std | |
-| tbody_gyro_mag_mean | |
-| tbody_gyro_mag_std | |
-| tbody_gyrojerk_mag_mean | |
-| tbody_gyrojerk_mag_std | |
-| fbody_accel_mean_x | |
-| fbody_accel_mean_y | |
-| fbody_accel_mean_z | |
-| fbody_accel_std_x | |
-| fbody_accel_std_y | |
-| fbody_accel_std_z | |
-| fbody_accel_jerk_mean_x | |
-| fbody_accel_jerk_mean_y | |
-| fbody_accel_jerk_mean_z | |
-| fbody_accel_jerk_std_x | |
-| fbody_accel_jerk_std_y | |
-| fbody_accel_jerk_std_z | |
-| fbody_gyro_mean_x | |
-| fbody_gyro_mean_y | |
-| fbody_gyro_mean_z | |
-| fbody_gyro_std_x | |
-| fbody_gyro_std_y | |
-| fbody_gyro_std_z | |
-| fbody_accel_mag_mean | |
-| fbody_accel_mag_std | |
-| fbody_body_accel_jerk_mag_mean | |
-| fbody_body_accel_jerk_mag_std | |
-| fbody_body_gyro_mag_mean | |
-| fbody_body_gyro_mag_std | |
-| fbody_body_gyro_jerk_mag_mean | |
-| fbody_body_gyro_jerk_mag_std | |
+| tbody_accel_mean_x | Measurements from the initial data |
+| tbody_accel_mean_y | Measurements from the initial data |
+| tbody_accel_mean_z | Measurements from the initial data |
+| tbody_accel_std_x | Measurements from the initial data |
+| tbody_accel_std_y | Measurements from the initial data |
+| tbody_accel_std_z | Measurements from the initial data |
+| tgravity_accel_mean_x | Measurements from the initial data |
+| tgravity_accel_mean_y | Measurements from the initial data |
+| tgravity_accel_mean_z | Measurements from the initial data |
+| tgravity_accel_std_x | Measurements from the initial data |
+| tgravity_accel_std_y | Measurements from the initial data |
+| tgravity_accel_std_z | Measurements from the initial data |
+| tbody_accel_jerk_mean_x | Measurements from the initial data |
+| tbody_accel_jerk_mean_y | Measurements from the initial data |
+| tbody_accel_jerk_mean_z | Measurements from the initial data |
+| tbody_accel_jerk_std_x | Measurements from the initial data |
+| tbody_accel_jerk_std_y | Measurements from the initial data |
+| tbody_accel_jerk_std_z | Measurements from the initial data |
+| tbody_gyro_mean_x | Measurements from the initial data |
+| tbody_gyro_mean_y | Measurements from the initial data |
+| tbody_gyro_mean_z | Measurements from the initial data |
+| tbody_gyro_std_x | Measurements from the initial data |
+| tbody_gyro_std_y | Measurements from the initial data |
+| tbody_gyro_std_z | Measurements from the initial data |
+| tbody_gyrojerk_mean_x | Measurements from the initial data |
+| tbody_gyrojerk_mean_y | Measurements from the initial data |
+| tbody_gyrojerk_mean_z | Measurements from the initial data |
+| tbody_gyrojerk_std_x | Measurements from the initial data |
+| tbody_gyrojerk_std_y | Measurements from the initial data |
+| tbody_gyrojerk_std_z | Measurements from the initial data |
+| tbody_accel_mag_mean | Measurements from the initial data |
+| tbody_accel_mag_std | Measurements from the initial data |
+| tgravity_accel_mag_mean | Measurements from the initial data |
+| tgravity_accel_mag_std | Measurements from the initial data |
+| tbody_accel_jerkmag_mean | Measurements from the initial data |
+| tbody_accel_jerkmag_std | Measurements from the initial data |
+| tbody_gyro_mag_mean | Measurements from the initial data |
+| tbody_gyro_mag_std | Measurements from the initial data |
+| tbody_gyrojerk_mag_mean | Measurements from the initial data |
+| tbody_gyrojerk_mag_std | Measurements from the initial data |
+| fbody_accel_mean_x | Measurements from the initial data |
+| fbody_accel_mean_y | Measurements from the initial data |
+| fbody_accel_mean_z | Measurements from the initial data |
+| fbody_accel_std_x | Measurements from the initial data |
+| fbody_accel_std_y | Measurements from the initial data |
+| fbody_accel_std_z | Measurements from the initial data |
+| fbody_accel_jerk_mean_x | Measurements from the initial data |
+| fbody_accel_jerk_mean_y | Measurements from the initial data |
+| fbody_accel_jerk_mean_z | Measurements from the initial data |
+| fbody_accel_jerk_std_x | Measurements from the initial data |
+| fbody_accel_jerk_std_y | Measurements from the initial data |
+| fbody_accel_jerk_std_z | Measurements from the initial data |
+| fbody_gyro_mean_x | Measurements from the initial data |
+| fbody_gyro_mean_y | Measurements from the initial data |
+| fbody_gyro_mean_z | Measurements from the initial data |
+| fbody_gyro_std_x | Measurements from the initial data |
+| fbody_gyro_std_y | Measurements from the initial data |
+| fbody_gyro_std_z | Measurements from the initial data |
+| fbody_accel_mag_mean | Measurements from the initial data |
+| fbody_accel_mag_std | Measurements from the initial data |
+| fbody_body_accel_jerk_mag_mean | Measurements from the initial data |
+| fbody_body_accel_jerk_mag_std | Measurements from the initial data |
+| fbody_body_gyro_mag_mean | Measurements from the initial data |
+| fbody_body_gyro_mag_std | Measurements from the initial data |
+| fbody_body_gyro_jerk_mag_mean | Measurements from the initial data |
+| fbody_body_gyro_jerk_mag_std | Measurements from the initial data |
 | activity | The expected output of the observation |
 
 ## Script explanation
